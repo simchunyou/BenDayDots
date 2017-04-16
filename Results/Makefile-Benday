@@ -1,0 +1,19 @@
+#Makefile will compile my code for me 
+
+#Compliler
+CC = clang
+
+#File
+FILE = i7208422_Sim_BenDayDots.c
+
+#Output
+OUTPUT = BenDay_Program
+
+build: $(FILE)
+	$(CC) $(FILE) -l SDL2 -l SDL2_image -o $(OUTPUT)
+	
+clean:
+	@echo remove object files
+	@rm $(FILE)
+	
+rebuild: clean build
